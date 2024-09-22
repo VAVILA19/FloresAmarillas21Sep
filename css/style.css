@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+
+* {
+    font-family: 'Poppins', cursive;
+}
+
+body {
+    color: azure;
+    margin: 0; /* Eliminar margen */
+    min-height: 100vh; /* Asegura que el contenido ocupe toda la altura */
+    overflow-y: auto; /* Permitir desplazamiento vertical si es necesario */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+.buttons-container {
+    display: flex; /* Alínea los botones uno al lado del otro */
+    gap: 10px; /* Espacio entre los botones */
+}
+
+.button {
+    position: relative; /* Permitir que el botón se alinee correctamente */
+}
+
+.botones {
+    padding: 9px;
+    border-radius: 80px;
+    background-color: transparent;
+    border: none;
+}
+
+.botones a {
+    background-color: #0a2be9;
+    padding: 9px;
+    border-radius: 80px;
+    text-decoration: none;
+    font-size: 1.2rem; /* Ajustado el tamaño del texto en el botón */
+    color: #fff; /* Cambiado a blanco para mejor visibilidad */
+    transition: background-color 0.3s ease; /* Suaviza el cambio de color */
+}
+
+.botones a:focus {
+    background-color: rgb(50, 194, 194);
+}
+
+.botonMovi {
+    position: absolute; /* Permite que el botón se mueva dentro de su contenedor */
+    padding: 10px 20px; 
+    background-color: blue; 
+    color: white; 
+    border: none; 
+    cursor: pointer; 
+    transition: all 0.3s ease; /* Tiempo de transición más largo */
+}
+
+.botonMovi:hover {
+    transform: scale(1.1); /* Efecto de escala al pasar el mouse */
+}
+
+.greetings {
+    font-size: 8rem; /* Ajustado el tamaño de la fuente */
+    font-weight: 900;
+}
+
+.greetings > span {
+    animation: glow 2.5s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0%, 100% {
+        color: #fff;
+        text-shadow: 0 0 12px #39c6d6, 0 0 50px #39c6d6, 0 0 100px #39c6d6;
+    }
+    10%, 90% {
+        color: #111;
+        text-shadow: none;
+    }
+}
+
+.greetings > span:nth-child(2) { animation-delay: .2s; }
+.greetings > span:nth-child(3) { animation-delay: .4s; }
+.greetings > span:nth-child(4) { animation-delay: .6s; }
+.greetings > span:nth-child(5) { animation-delay: .8s; }
+.greetings > span:nth-child(6) { animation-delay: 1s; }
+
+.description {
+    font-size: 1rem; /* Ajustado el tamaño de la fuente */
+    margin-bottom: 20px;
+}
+
+.button a {
+    text-decoration: none;
+    font-size: 1rem; /* Ajustado el tamaño del texto en el botón */
+    color: #fff; /* Color del texto en los enlaces del botón */
+}
+
+@media screen and (max-width: 574px) {
+    .greetings {
+        display: block;
+        font-size: 5rem; /* Ajustado para pantallas pequeñas */
+        font-weight: 800;
+        text-align: center;
+    }
+    .description {
+        font-size: 1rem; /* Ajustado para pantallas pequeñas */
+    }
+    .button a {
+        font-size: 0.8rem; /* Mantén el tamaño o ajusta según sea necesario */
+        padding: 10px 20px; /* Aumenta el área táctil */
+    }
+    .botonMovi {
+        padding: 8px 16px; /* Ajustar tamaño del botón para móviles */
+    }
+}
+
+
+.greetingsDespe {
+    font-size: 2rem; /* Ajustado el tamaño de la fuente */
+    font-weight: 900;
+}
+
+.greetingsDespe > span {
+    animation: glow 2.5s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0%, 100% {
+        color: #fff;
+        text-shadow: 0 0 12px #39c6d6, 0 0 50px #39c6d6, 0 0 100px #39c6d6;
+    }
+    10%, 90% {
+        color: #111;
+        text-shadow: none;
+    }
+}
+
+.greetingsDespe > span:nth-child(2) { animation-delay: .2s; }
+.greetingsDespe > span:nth-child(3) { animation-delay: .4s; }
+.greetingsDespe > span:nth-child(4) { animation-delay: .6s; }
+.greetingsDespe > span:nth-child(5) { animation-delay: .8s; }
+.greetingsDespe > span:nth-child(6) { animation-delay: 1s; }
